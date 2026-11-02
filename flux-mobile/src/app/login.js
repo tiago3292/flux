@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, TextInput, Pressable, ActivityIndicator, StyleSheet } from "react-native";
+import { View, Text, Image, TextInput, Pressable, ActivityIndicator, StyleSheet } from "react-native";
 import { useAuth } from "../contexts/AuthContext";
 
 export default function Login() {
@@ -29,11 +29,16 @@ export default function Login() {
 
     return (
         <View style={styles.container}>
+            <Image
+                style={styles.logo}
+                source={require('../../assets/images/flux-logo-white.png')}
+            />
             <Text style={styles.title}>Flux</Text>
 
             <TextInput
                 style={styles.input}
                 placeholder="Usuário"
+                placeholderTextColor="#374151"
                 value={username}
                 onChangeText={setUsername}
                 autoCapitalize="none"
@@ -41,6 +46,7 @@ export default function Login() {
             <TextInput
                 style={styles.input}
                 placeholder="Senha"
+                placeholderTextColor="#374151"
                 value={password}
                 onChangeText={setPassword}
                 secureTextEntry
@@ -64,11 +70,12 @@ export default function Login() {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, justifyContent: "center", padding: 24 },
-    title: { fontSize: 28, fontWeight: "bold", marginBottom: 24 },
-    input: { borderWidth: 1, borderColor: "#ccc", borderRadius: 8, padding: 12, marginBottom: 12 },
+    container: { flex: 1, justifyContent: "center", padding: 24, backgroundColor: "#09090b" },
+    title: { fontSize: 28, fontWeight: "bold", marginBottom: 24, color: "#9f9fa9", textAlign: "center" },
+    logo: { alignSelf: "center", width: 80, height: 80, marginBottom: 10 },
+    input: { borderWidth: 1, color: "#9f9fa9", borderColor: "#9f9fa9", padding: 12, marginBottom: 12 },
     error: { color: "#dc2626", marginBottom: 12 },
-    button: { backgroundColor: "#2563eb", padding: 14, borderRadius: 8, alignItems: "center" },
+    button: { backgroundColor: "#f54900", padding: 14, alignItems: "center" },
     buttonDisabled: {opacity: 0.6},
     buttonText: { color: "#fff", fontWeight: "600" },
 });

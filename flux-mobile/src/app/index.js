@@ -66,15 +66,17 @@ export default function Dashboard() {
             <ScrollView contentContainerStyle={styles.content}>
                 <View style={styles.header}>
                     <Text style={styles.title}>Olá, {username}!</Text>
-                    <Pressable onPress={() => router.push("/new-item")}>
-                        <Text style={styles.add}>+ Nova</Text>
-                    </Pressable>
-                    <Pressable onPress={() => router.push("/itemsPage")}>
-                        <Text style={styles.add}>Transações</Text>
-                    </Pressable>
-                    <Pressable onPress={signOut}>
-                        <Text style={styles.logout}>Sair</Text>
-                    </Pressable>
+                    <View style={styles.headerActions}>
+                        <Pressable onPress={() => router.push("/new-item")}>
+                            <Text style={styles.add}>+ Nova</Text>
+                        </Pressable>
+                        <Pressable onPress={() => router.push("/itemsPage")}>
+                            <Text style={styles.add}>Transações</Text>
+                        </Pressable>
+                        <Pressable onPress={signOut}>
+                            <Text style={styles.logout}>Sair</Text>
+                        </Pressable>
+                    </View>
                 </View>
 
                 <View style={styles.balanceCard}>
@@ -147,18 +149,20 @@ function CategoryBars({ title, entries, color }) {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1 },
+    container: { flex: 1, backgroundColor: "#09090b" },
     content: { padding: 16, gap: 12 },
     center: { flex: 1, justifyContent: "center", alignItems: "center", gap: 12 },
-    header: {flexDirection: "row", justifyContent: "space-between", alignItems: "center"},
-    title: { fontSize: 24, fontWeight: "bold" },
-    add: { color: "#2563eb", fontWeight: "600" },
+    header: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: 16 },
+    headerActions: { flexDirection: "row", gap: 16 },
+    title: { fontSize: 24, fontWeight: "bold", color: "#f54900" },
+    add: { backgroundColor: "#18181b", color: "#9f9fa9", fontWeight: "600", paddingVertical: 3, paddingHorizontal: 6, borderWidth: 1, borderColor: "#9f9fa9" },
+    logout: { backgroundColor: "#82181a", color: "#ff6467", fontWeight: "600", paddingVertical: 3, paddingHorizontal: 6, borderWidth: 1, borderColor: "#ff6467" },
     link: { color: "#2563eb", fontWeight: "600" },
     error: { color: "#dc2626" },
     row: { flexDirection: "row", gap: 12 },
     flex1: { flex: 1 },
-    card: { backgroundColor: "#f3f4f6", borderRadius: 10, padding: 14 },
-    balanceCard: { backgroundColor: "#f3f4f6", borderRadius: 10, padding: 18 },
+    card: { borderWidth: 1, borderColor: "#18181b", padding: 14 },
+    balanceCard: { backgroundColor: "#18181b", padding: 18 },
     cardLabel: { color: "#6b7280", fontSize: 12, textTransform: "uppercase", fontWeight: "600" },
     balance: { fontSize: 32, fontWeight: "bold", marginTop: 4 },
     cardValue: { fontSize: 20, fontWeight: "bold", marginTop: 4 },
@@ -167,8 +171,8 @@ const styles = StyleSheet.create({
     empty: { color: "#6b7280" },
     barRow: { marginBottom: 10 },
     barLabel: { flexDirection: "row", justifyContent: "space-between", marginBottom: 4 },
-    barName: { textTransform: "capitalize" },
-    barPercent: { fontWeight: "600" },
-    barTrack: { height: 8, backgroundColor: "#e5e7eb", borderRadius: 4, overflow: "hidden" },
-    barFill: { height: 8, borderRadius: 4 },
+    barName: { textTransform: "capitalize", color: "#6b7280" },
+    barPercent: { fontWeight: "600", color: "#6b7280" },
+    barTrack: { height: 8, backgroundColor: "", overflow: "hidden", borderWidth: 1, borderColor: "#18181b" },
+    barFill: { height: 8 },
 });

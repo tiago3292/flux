@@ -74,18 +74,20 @@ export default function NewItem() {
                 <TextInput
                     style={styles.input}
                     placeholder="Título"
+                    placeholderTextColor="#374151"
                     value={title}
                     onChangeText={setTitle}
                 />
                 <TextInput
                     style={styles.input}
                     placeholder="Valor (ex: 25,90)"
+                    placeholderTextColor="#374151"
                     value={value}
                     onChangeText={setValue}
                     keyboardType="decimal-pad"
                 />
 
-                <Text stlye={styles.label}>Categoria</Text>
+                <Text style={styles.label}>Categoria</Text>
                 <View style={styles.chips}>
                     {CATEGORIES[type].map((c) => (
                         <Pressable
@@ -119,25 +121,25 @@ export default function NewItem() {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, paddingHorizontal: 16 },
+    container: { flex: 1, paddingHorizontal: 16, backgroundColor: "#09090b" },
     header: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingVertical: 16 },
-    title: { fontSize: 24, fontWeight: "bold" },
-    cancel: { color: "#6b7280", fontWeight: "600" },
+    title: { fontSize: 24, fontWeight: "bold", color: "#f54900" },
+    cancel: { backgroundColor: "#18181b", color: "#9f9fa9", fontWeight: "600", paddingVertical: 3, paddingHorizontal: 6, borderWidth: 1, borderColor: "#9f9fa9" },
     typeRow: { flexDirection: "row", gap: 8, marginBottom: 16 },
-    typeButton: { flex: 1, padding: 12, borderRadius: 8, borderWidth: 1, borderColor: "#ccc", alignItems: "center" },
-    typeButtonActive: { backgroundColor: "#2563eb", borderColor: "#2563eb" },
+    typeButton: { flex: 1, padding: 12, borderWidth: 1, borderColor: "#9f9fa9", alignItems: "center" },
+    typeButtonActive: { backgroundColor: "#f54900", borderColor: "#f54900" },
     typeText: { fontWeight: "600", color: "#374151" },
     typeTextActive: { color: "#fff" },
-    input: { borderWidth: 1, borderColor: "#ccc", borderRadius: 8, padding: 12, marginBottom: 12 },
-    label: { fontWeight: "600", marginBottom: 8 },
+    input: { borderWidth: 1, color: "#9f9fa9", borderColor: "#9f9fa9", padding: 12, marginBottom: 12 },
+    label: { fontWeight: "600", marginBottom: 16, color: "#9f9fa9" },
     chips: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginBottom: 16 },
-    chip: { paddingVertical: 8, paddingHorizontal: 14, borderRadius: 20, borderWidth: 1, borderColor: "#ccc" },
-    chipActive: { backgroundColor: "#dbeafe", borderColor: "#2563eb" },
+    chip: { paddingVertical: 8, paddingHorizontal: 14, borderWidth: 1, borderColor: "#9f9fa9" },
+    chipActive: { backgroundColor: "#9f9fa9", borderColor: "#9f9fa9" },
     chipText: { color: "#374151" },
     chipText: { color: "#374151" },
-    chipTextActive: { color: "#1d4ed8", fontWeight: "600" },
+    chipTextActive: { color: "#09090b", fontWeight: "600" },
     error: { color: "#dc2626", marginBottom: 12 },
-    saveButton: { backgroundColor: "#16a34a", padding: 14, borderRadius: 8, alignItems: "center" },
+    saveButton: { backgroundColor: "#16a34a", padding: 14, alignItems: "center" },
     saveDisabled: { opacity: 0.6 },
     saveText: { color: "#fff", fontWeight: "600" },
 });
