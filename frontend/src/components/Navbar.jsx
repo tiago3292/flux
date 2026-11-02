@@ -14,7 +14,7 @@ export default function Navbar() {
     <nav className="border-b-1 -mx-13 md:-mx-10 -mt-5 md:-mt-8 border-zinc-600 p-4 font-mono">
       <div className="mx-8 md:mx-7 flex justify-between items-center">
         <Link to="/dashboard" className="text-sm md:text-2xl font-black uppercase text-orange-600 tracking-tight">
-          //FINANCES APP
+          //FLUX
         </Link>
         <div className="flex items-center space-x-2 md:space-x-6">
           <Link
