@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
+import logo from "../assets/flux-logo-white.png"
 
 function LoginPage() {
   const [username, setUsername] = useState("");
@@ -28,7 +29,8 @@ function LoginPage() {
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 font-mono flex flex-col items-center justify-center p-4">
-      <h1 className="flex justify-center pb-10 text-6xl font-black uppercase text-orange-600">Finances App</h1>
+      <img src={logo} alt="logo" width={150} height={150} />
+      <h1 className="flex justify-center pt-6 pb-10 text-5xl font-black">Flux</h1>
       <div className="w-full max-w-md bg-zinc-900 border-1 border-zinc-600 p-8">
         <header className="mb-6 border-b-1 border-zinc-600 pb-3">
           <h2 className="text-3xl font-black uppercase tracking-tight">Login</h2>
