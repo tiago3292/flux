@@ -184,7 +184,7 @@ mobile/
 As instruções à seguir mostram como instalar e executar o código fonte localmente.
 
 Preview online
-Se você quiser usar a versão online, clique <a href="https://task-tracker-api-2k8u.onrender.com" target="_blank">neste link</a> para iniciar o serviço de backend, e depois <a href="https://finance-tracker-sigma-bice-93.vercel.app" target="_blank">neste link</a> para acessar o aplicativo.
+Se você quiser usar a versão online, clique <a href="https://finances-api-qnsf.onrender.com/docs" target="_blank">neste link</a> para iniciar o serviço de backend, e depois <a href="https://flux-sigma-bice-93.vercel.app/" target="_blank">neste link</a> para acessar o aplicativo.
 
 <p align="right">(<a href="#topo">Voltar ao topo</a>)</p>
 
